@@ -21,10 +21,10 @@ CREATE TABLE Orders (
 );
 
 -- Creating OrderItems Table to store products per order
+-- Creating OrderItems Table to store products per order
 CREATE TABLE OrderItems (
-    orderID INT,
+    orderID INT PRIMARY KEY AUTO_INCREMENT,
     product VARCHAR(100),
     quantity INT,
-    PRIMARY KEY (OrderID, Product),
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
 );
